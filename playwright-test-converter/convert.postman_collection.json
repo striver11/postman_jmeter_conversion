@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "da08bf45-b6a7-46b2-b99f-2016c23e64ea",
+		"name": "convert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16227959"
+	},
+	"item": [
+		{
+			"name": "convertToPlaywright",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"UserId is equal to 1\", function () {\r",
+							"    pm.expect(response.userId).to.equal(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Completed is equal to false\", function () {\r",
+							"    pm.expect(response.completed).to.equal(false);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Title is equal to false\", function () {\r",
+							"    pm.expect(response.title).to.equal(\"delectus aut autem\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/todos/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

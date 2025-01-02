@@ -1,0 +1,22 @@
+{
+  "name": "convert-to-playwright",
+  "version": "1.0.0",
+  "description": "Convert Postman Collections to Playwright scripts",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "pw": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "archiver": "^7.0.1",
+    "commander": "12.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "playwright": "^1.45.3"
+  }
+}
