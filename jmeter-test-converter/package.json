@@ -1,0 +1,27 @@
+{
+    "name": "convert-postman-jmeter",
+    "version": "2.3.1",
+    "description": "Convert Postman collections to JMeter test plans",
+    "main": "bin/convert-postman-jmeter.js",
+    "scripts": {
+      "start": "node bin/convert-postman-jmeter.js",
+      "convert": "node bin/convert-postman-jmeter.js",
+      "test": "nyc mocha test",
+      "lint": "eslint lib --format junit --output-file reports/eslint/eslint.xml"
+    },
+    "bin": {
+      "convert-postman-jmeter": "bin/convert-postman-jmeter.js"
+    },
+    "dependencies": {
+      "axios": "^1.7.9",
+      "mustache": "^4.2.0",
+      "yargs": "^17.7.2"
+    },
+    "devDependencies": {
+      "chai": "^4.4.1",
+      "eslint": "^8.57.0",
+      "mocha": "^10.4.0",
+      "nyc": "^15.1.0"
+    }
+  }
+  
