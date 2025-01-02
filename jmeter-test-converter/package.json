@@ -1,27 +1,22 @@
 {
-    "name": "convert-postman-jmeter",
-    "version": "2.3.1",
-    "description": "Convert Postman collections to JMeter test plans",
-    "main": "bin/convert-postman-jmeter.js",
-    "scripts": {
-      "start": "node bin/convert-postman-jmeter.js",
-      "convert": "node bin/convert-postman-jmeter.js",
-      "test": "nyc mocha test",
-      "lint": "eslint lib --format junit --output-file reports/eslint/eslint.xml"
-    },
-    "bin": {
-      "convert-postman-jmeter": "bin/convert-postman-jmeter.js"
-    },
-    "dependencies": {
-      "axios": "^1.7.9",
-      "mustache": "^4.2.0",
-      "yargs": "^17.7.2"
-    },
-    "devDependencies": {
-      "chai": "^4.4.1",
-      "eslint": "^8.57.0",
-      "mocha": "^10.4.0",
-      "nyc": "^15.1.0"
-    }
+  "name": "convert-to-playwright",
+  "version": "1.0.0",
+  "description": "Convert Postman Collections to Playwright scripts",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "pw": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "archiver": "^7.0.1",
+    "commander": "12.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "playwright": "^1.45.3"
   }
-  
+}
